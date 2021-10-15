@@ -23,7 +23,7 @@ public class MessageController {
         boolean isExists = UserStorage.getInstance().getUsers().contains(to);
         if (isExists) {
             simpMessagingTemplate.convertAndSend("/topic/messages/" + to, message);
-            
+
         }
     }
 }
